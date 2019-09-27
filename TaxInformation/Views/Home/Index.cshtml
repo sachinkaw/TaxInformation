@@ -1,0 +1,38 @@
+﻿@model TaxInformation.Models.OrgCustomize
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <link href="~/CSS/TaxStyle.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+</head>
+<body>
+
+    <h2>Site SetUp</h2>
+
+    <form action="@Url.Action("UpdateDB", "Home")" , method="post">
+        <label for="Organisation Name" >
+            <select name="OrganisationName" >
+                <option>Client Demo</option>
+                @foreach (var Data in Model.OrgIDDropDownProp)
+                {
+                    <option @Data.OrgName>@Data.OrgName</option>
+                }
+            </select>
+        </label><br /><br />
+
+
+        Tax Name: <input type="text" name="tname"><br><br />
+        Tax Rate: <input type="text" name="trate"><br><br />
+
+        <input type="submit" name="SaveTaxRecord" value="Submit" />
+
+    </form>
+</body>
+</html>
+
+
+

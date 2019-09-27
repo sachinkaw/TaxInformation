@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Org">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="200" />
+    <Property Name="SchoolId" Type="int" />
+    <Property Name="OldId" Type="int" />
+    <Property Name="CompanyName" Type="nvarchar" MaxLength="200" />
+    <Property Name="TypeId" Type="int" />
+    <Property Name="ParentId" Type="int" />
+    <Property Name="TerritoryId" Type="int" />
+    <Property Name="ContactId" Type="int" />
+    <Property Name="Decile" Type="int" />
+    <Property Name="Roll" Type="int" />
+    <Property Name="RollApproved" Type="int" />
+    <Property Name="LeaseStart" Type="date" />
+    <Property Name="LeaseEnd" Type="date" />
+    <Property Name="LeasorName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LeaseCostFixed" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="MeetingRoom" Type="nvarchar" MaxLength="100" />
+    <Property Name="BankAccNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="MsdNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="OscarNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="Comments" Type="nvarchar" MaxLength="500" />
+    <Property Name="ExtraChargeType" Type="nvarchar" MaxLength="50" />
+    <Property Name="ExtraMinRate" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="BeforeThreshold" Type="int" />
+    <Property Name="AfterThreshold" Type="int" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdateOn" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="HasSaved" Type="bit" Nullable="false" />
+    <Property Name="Version" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="LicenceStart" Type="datetime" />
+    <Property Name="LicenceEnd" Type="datetime" />
+    <Property Name="WeeklyAdminCost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="WeeklyRentCost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CurrentRevenue" Type="money" />
+    <Property Name="CurrentExpenses" Type="money" />
+    <Property Name="CurrentBalance" Type="money" />
+    <Property Name="CurrentOverdueAmt" Type="money" />
+    <Property Name="MasterPin" Type="nvarchar" MaxLength="50" />
+    <Property Name="IsChildPhotoEnabled" Type="bit" />
+    <Property Name="IsAuthPhotoEnabled" Type="bit" />
+    <Property Name="IsStaffPhotoEnabled" Type="bit" />
+    <Property Name="IsMultiSitePickupEnabled" Type="bit" />
+    <Property Name="IsFreeTrial" Type="bit" />
+    <Property Name="ExpiryDate" Type="datetime" />
+    <Property Name="StaffClockMethod" Type="nvarchar" MaxLength="50" />
+    <Property Name="LeaseCostPercentage" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="IsPaymentGatewayEnabled" Type="bit" />
+    <Property Name="SiteBankAccNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="LicenceFee" Type="money" />
+    <Property Name="IsDashboardMsgEnabled" Type="bit" />
+    <Property Name="IsEMailMsgEnabled" Type="bit" />
+    <Property Name="IsSMSMsgEnabled" Type="bit" />
+    <Property Name="SiteContactPersone" Type="nvarchar" MaxLength="100" />
+    <Property Name="SiteContactPhoneFixed" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteContactEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="InvoiceDateSetting" Type="bit" Nullable="false" />
+    <Property Name="HeadOfficeLogo" Type="nvarchar" MaxLength="250" />
+    <Property Name="IsWizard" Type="bit" />
+    <Property Name="LastStep" Type="int" />
+    <Property Name="IsProgrammePriceVisible" Type="bit" />
+    <Property Name="IsBookingPromoMsgVisible" Type="bit" />
+    <Property Name="BookingPromotionMsg" Type="nvarchar(max)" />
+    <Property Name="IsHolBookingPromoMsgVisible" Type="bit" />
+    <Property Name="HolBookingPromoMsg" Type="nvarchar(max)" />
+    <Property Name="IsSpecialBookingPromoMsgVisible" Type="bit" />
+    <Property Name="SpecialBookingPromoMsg" Type="nvarchar(max)" />
+    <Property Name="LoginURL" Type="nvarchar" MaxLength="550" />
+    <Property Name="ShowCustomisedBooking" Type="bit" Nullable="false" />
+    <Property Name="InvoiceDay" Type="int" />
+    <Property Name="InvoiceDueDays" Type="int" />
+    <Property Name="InvoiceGenDay" Type="int" Nullable="false" />
+    <Property Name="InvoiceGenWeek" Type="int" Nullable="false" />
+    <Property Name="InvoiceDueDay" Type="int" Nullable="false" />
+    <Property Name="InvoiceDueWeek" Type="int" Nullable="false" />
+    <Property Name="IsInvArrearBasedOnStart" Type="bit" />
+    <Property Name="CSSBillingPlanId" Type="int" />
+    <Property Name="CSSRevireDate" Type="datetime" />
+    <Property Name="CSSComment" Type="varchar(max)" />
+    <Property Name="BookingInfoRegular" Type="nvarchar" MaxLength="200" />
+    <Property Name="BookingInfoCasual" Type="nvarchar" MaxLength="200" />
+    <Property Name="IsNew" Type="bit" />
+    <Property Name="CurrentStatus" Type="int" />
+    <Property Name="Logo" Type="nvarchar" MaxLength="255" />
+    <Property Name="AllowOverdueNotification" Type="bit" />
+    <Property Name="IsCreditCardPaymentDisabled" Type="bit" />
+    <Property Name="NewChildFlagDays" Type="int" />
+    <Property Name="ExclusionDayIsChargeable" Type="bit" />
+    <Property Name="IsAimyClient" Type="bit" />
+    <Property Name="CustomisedBookingCalendarReadOnly" Type="bit" />
+    <Property Name="ShowParentDOB" Type="bit" />
+    <Property Name="IsMergeReconcilInvoice" Type="bit" />
+    <Property Name="IsDeductByCCPayment" Type="bit" />
+    <Property Name="SiteLandlineNumberFixed" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingStreetNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="BillingSuburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingPostCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingCountry" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteStreetNum" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteAddress" Type="nvarchar" MaxLength="500" />
+    <Property Name="SiteSuburb" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="SitePostCode" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteCountry" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteLatitude" Type="nvarchar" MaxLength="250" />
+    <Property Name="SiteLongitude" Type="nvarchar" MaxLength="250" />
+    <Property Name="TimeZoneIdentifier" Type="nvarchar" MaxLength="250" />
+    <Property Name="Culture" Type="nvarchar" MaxLength="50" />
+    <Property Name="Language" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteContactPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiteLandlineNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="TradingName" Type="varchar" MaxLength="250" />
+    <Property Name="TaxNumber" Type="varchar" MaxLength="250" />
+    <Property Name="BillingContactPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingContactPerson" Type="nvarchar" MaxLength="100" />
+    <Property Name="BillingContactEmail" Type="nvarchar" MaxLength="100" />
+    <Property Name="BillingLandlineNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingLandlineNumberFixed" Type="nvarchar" MaxLength="50" />
+    <Property Name="BillingContactPhonefixed" Type="nvarchar" MaxLength="50" />
+    <Property Name="Capacity" Type="int" />
+    <Property Name="SiteSignatureImage" Type="varchar(max)" />
+    <Property Name="AllowArchivedMsg" Type="bit" />
+  </EntityType>
+  <EntityType Name="OrgCustomize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrgId" Type="int" Nullable="false" />
+    <Property Name="IsXeroEnabled" Type="bit" />
+    <Property Name="ShowCustomisedBooking" Type="bit" />
+    <Property Name="ShowSiteSetupNetwork" Type="bit" />
+    <Property Name="IsSubsidyEnabled" Type="bit" />
+    <Property Name="SchoolInfo" Type="varchar" MaxLength="200" />
+    <Property Name="Ethinicity" Type="varchar" MaxLength="200" />
+    <Property Name="TermsAndCondition" Type="varchar" MaxLength="200" />
+    <Property Name="ChildSignoutMethod" Type="varchar" MaxLength="200" />
+    <Property Name="XML" Type="varchar(max)" />
+    <Property Name="URL" Type="varchar" MaxLength="200" />
+    <Property Name="ShowHolidayProgram" Type="bit" />
+    <Property Name="ShowSpecialProgram" Type="bit" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedBy" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+    <Property Name="ShowStaffTitles" Type="bit" />
+    <Property Name="ShowDriverRole" Type="bit" />
+    <Property Name="ShowProgMgrRole" Type="bit" />
+    <Property Name="AllowBookOnWeekend" Type="bit" />
+    <Property Name="Is24HourClockFormat" Type="bit" />
+    <Property Name="ShowSingleRate" Type="bit" />
+    <Property Name="ShowImageOnBookingTemp" Type="bit" />
+    <Property Name="CanMarkAsPaid" Type="bit" />
+    <Property Name="ShowChildNoteOnMgmt" Type="bit" />
+    <Property Name="HowHear" Type="varchar" MaxLength="200" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="ShowMyStats" Type="bit" />
+    <Property Name="ShowNetworkStats" Type="bit" />
+    <Property Name="ShowAchievementTracking" Type="bit" />
+    <Property Name="ShowSiteSelectionOnEnrollment" Type="bit" />
+    <Property Name="HideDateRangeBooking" Type="bit" />
+    <Property Name="ShowDrivingLicence" Type="bit" />
+    <Property Name="ShowPermanentKeyOnBookingType" Type="bit" />
+    <Property Name="IsClassEnabled" Type="bit" />
+    <Property Name="TimezoneOffset" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ShowOscarIntendedAtBooking" Type="bit" />
+    <Property Name="ExcludeDaysChargeable" Type="bit" />
+    <Property Name="DisableWINZonForm" Type="bit" />
+    <Property Name="AllowIncompleteExpressRegister" Type="bit" />
+    <Property Name="Timezone" Type="varchar" MaxLength="250" />
+    <Property Name="FinanceModuleType" Type="int" />
+    <Property Name="CurrencySymbol" Type="varchar" MaxLength="50" />
+    <Property Name="CountryCode" Type="varchar" MaxLength="50" />
+    <Property Name="ShowBillingSetting" Type="bit" />
+    <Property Name="TaxName" Type="nvarchar" MaxLength="50" />
+    <Property Name="TaxRate" Type="decimal" Precision="5" Scale="4" />
+    <Property Name="Culture" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubsidySystem" Type="varchar" MaxLength="10" />
+    <Property Name="SubsidyLabel" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShowExtraFees" Type="bit" />
+    <Property Name="AllowTemplateSameInvPeriodPricing" Type="bit" />
+  </EntityType>
+  <Association Name="FK_Org_Org">
+    <End Role="Org" Type="Self.Org" Multiplicity="0..1" />
+    <End Role="Org1" Type="Self.Org" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Org">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Org1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrgCustomize_Org">
+    <End Role="Org" Type="Self.Org" Multiplicity="1" />
+    <End Role="OrgCustomize" Type="Self.OrgCustomize" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Org">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrgCustomize">
+        <PropertyRef Name="OrgId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Org" EntityType="Self.Org" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="OrgCustomize" EntityType="Self.OrgCustomize" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Org_Org" Association="Self.FK_Org_Org">
+      <End Role="Org" EntitySet="Org" />
+      <End Role="Org1" EntitySet="Org" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrgCustomize_Org" Association="Self.FK_OrgCustomize_Org">
+      <End Role="Org" EntitySet="Org" />
+      <End Role="OrgCustomize" EntitySet="OrgCustomize" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

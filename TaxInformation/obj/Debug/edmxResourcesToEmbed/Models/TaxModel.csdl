@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Org">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SchoolId" Type="Int32" />
+    <Property Name="OldId" Type="Int32" />
+    <Property Name="CompanyName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="TypeId" Type="Int32" />
+    <Property Name="ParentId" Type="Int32" />
+    <Property Name="TerritoryId" Type="Int32" />
+    <Property Name="ContactId" Type="Int32" />
+    <Property Name="Decile" Type="Int32" />
+    <Property Name="Roll" Type="Int32" />
+    <Property Name="RollApproved" Type="Int32" />
+    <Property Name="LeaseStart" Type="DateTime" Precision="0" />
+    <Property Name="LeaseEnd" Type="DateTime" Precision="0" />
+    <Property Name="LeasorName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LeaseCostFixed" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MeetingRoom" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BankAccNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MsdNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OscarNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ExtraChargeType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExtraMinRate" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="BeforeThreshold" Type="Int32" />
+    <Property Name="AfterThreshold" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdateOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CreatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="HasSaved" Type="Boolean" Nullable="false" />
+    <Property Name="Version" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="LicenceStart" Type="DateTime" Precision="3" />
+    <Property Name="LicenceEnd" Type="DateTime" Precision="3" />
+    <Property Name="WeeklyAdminCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="WeeklyRentCost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CurrentRevenue" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurrentExpenses" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurrentBalance" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="CurrentOverdueAmt" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MasterPin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IsChildPhotoEnabled" Type="Boolean" />
+    <Property Name="IsAuthPhotoEnabled" Type="Boolean" />
+    <Property Name="IsStaffPhotoEnabled" Type="Boolean" />
+    <Property Name="IsMultiSitePickupEnabled" Type="Boolean" />
+    <Property Name="IsFreeTrial" Type="Boolean" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+    <Property Name="StaffClockMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LeaseCostPercentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="IsPaymentGatewayEnabled" Type="Boolean" />
+    <Property Name="SiteBankAccNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LicenceFee" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="IsDashboardMsgEnabled" Type="Boolean" />
+    <Property Name="IsEMailMsgEnabled" Type="Boolean" />
+    <Property Name="IsSMSMsgEnabled" Type="Boolean" />
+    <Property Name="SiteContactPersone" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SiteContactPhoneFixed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SiteContactEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="InvoiceDateSetting" Type="Boolean" Nullable="false" />
+    <Property Name="HeadOfficeLogo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IsWizard" Type="Boolean" />
+    <Property Name="LastStep" Type="Int32" />
+    <Property Name="IsProgrammePriceVisible" Type="Boolean" />
+    <Property Name="IsBookingPromoMsgVisible" Type="Boolean" />
+    <Property Name="BookingPromotionMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsHolBookingPromoMsgVisible" Type="Boolean" />
+    <Property Name="HolBookingPromoMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IsSpecialBookingPromoMsgVisible" Type="Boolean" />
+    <Property Name="SpecialBookingPromoMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LoginURL" Type="String" MaxLength="550" FixedLength="false" Unicode="true" />
+    <Property Name="ShowCustomisedBooking" Type="Boolean" Nullable="false" />
+    <Property Name="InvoiceDay" Type="Int32" />
+    <Property Name="InvoiceDueDays" Type="Int32" />
+    <Property Name="InvoiceGenDay" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceGenWeek" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceDueDay" Type="Int32" Nullable="false" />
+    <Property Name="InvoiceDueWeek" Type="Int32" Nullable="false" />
+    <Property Name="IsInvArrearBasedOnStart" Type="Boolean" />
+    <Property Name="CSSBillingPlanId" Type="Int32" />
+    <Property Name="CSSRevireDate" Type="DateTime" Precision="3" />
+    <Property Name="CSSComment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BookingInfoRegular" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="BookingInfoCasual" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsNew" Type="Boolean" />
+    <Property Name="CurrentStatus" Type="Int32" />
+    <Property Name="Logo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AllowOverdueNotification" Type="Boolean" />
+    <Property Name="IsCreditCardPaymentDisabled" Type="Boolean" />
+    <Property Name="NewChildFlagDays" Type="Int32" />
+    <Property Name="ExclusionDayIsChargeable" Type="Boolean" />
+    <Property Name="IsAimyClient" Type="Boolean" />
+    <Property Name="CustomisedBookingCalendarReadOnly" Type="Boolean" />
+    <Property Name="ShowParentDOB" Type="Boolean" />
+    <Property Name="IsMergeReconcilInvoice" Type="Boolean" />
+    <Property Name="IsDeductByCCPayment" Type="Boolean" />
+    <Property Name="SiteLandlineNumberFixed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingStreetNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="BillingSuburb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingPostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SiteStreetNum" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SiteAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="SiteSuburb" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SiteCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SitePostCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SiteCountry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SiteLatitude" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SiteLongitude" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="TimeZoneIdentifier" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Culture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Language" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SiteContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SiteLandlineNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TradingName" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TaxNumber" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BillingContactPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingContactPerson" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillingContactEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="BillingLandlineNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingLandlineNumberFixed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BillingContactPhonefixed" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Capacity" Type="Int32" />
+    <Property Name="SiteSignatureImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="AllowArchivedMsg" Type="Boolean" />
+    <NavigationProperty Name="Org1" Relationship="Self.FK_Org_Org" FromRole="Org" ToRole="Org1" />
+    <NavigationProperty Name="Org2" Relationship="Self.FK_Org_Org" FromRole="Org1" ToRole="Org" />
+    <NavigationProperty Name="OrgCustomizes" Relationship="Self.FK_OrgCustomize_Org" FromRole="Org" ToRole="OrgCustomize" />
+  </EntityType>
+  <EntityType Name="OrgCustomize">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrgId" Type="Int32" Nullable="false" />
+    <Property Name="IsXeroEnabled" Type="Boolean" />
+    <Property Name="ShowCustomisedBooking" Type="Boolean" />
+    <Property Name="ShowSiteSetupNetwork" Type="Boolean" />
+    <Property Name="IsSubsidyEnabled" Type="Boolean" />
+    <Property Name="SchoolInfo" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Ethinicity" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="TermsAndCondition" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ChildSignoutMethod" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="XML" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="ShowHolidayProgram" Type="Boolean" />
+    <Property Name="ShowSpecialProgram" Type="Boolean" />
+    <Property Name="CreatedBy" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="UpdatedBy" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UpdatedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ShowStaffTitles" Type="Boolean" />
+    <Property Name="ShowDriverRole" Type="Boolean" />
+    <Property Name="ShowProgMgrRole" Type="Boolean" />
+    <Property Name="AllowBookOnWeekend" Type="Boolean" />
+    <Property Name="Is24HourClockFormat" Type="Boolean" />
+    <Property Name="ShowSingleRate" Type="Boolean" />
+    <Property Name="ShowImageOnBookingTemp" Type="Boolean" />
+    <Property Name="CanMarkAsPaid" Type="Boolean" />
+    <Property Name="ShowChildNoteOnMgmt" Type="Boolean" />
+    <Property Name="HowHear" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="ShowMyStats" Type="Boolean" />
+    <Property Name="ShowNetworkStats" Type="Boolean" />
+    <Property Name="ShowAchievementTracking" Type="Boolean" />
+    <Property Name="ShowSiteSelectionOnEnrollment" Type="Boolean" />
+    <Property Name="HideDateRangeBooking" Type="Boolean" />
+    <Property Name="ShowDrivingLicence" Type="Boolean" />
+    <Property Name="ShowPermanentKeyOnBookingType" Type="Boolean" />
+    <Property Name="IsClassEnabled" Type="Boolean" />
+    <Property Name="TimezoneOffset" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ShowOscarIntendedAtBooking" Type="Boolean" />
+    <Property Name="ExcludeDaysChargeable" Type="Boolean" />
+    <Property Name="DisableWINZonForm" Type="Boolean" />
+    <Property Name="AllowIncompleteExpressRegister" Type="Boolean" />
+    <Property Name="Timezone" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="FinanceModuleType" Type="Int32" />
+    <Property Name="CurrencySymbol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ShowBillingSetting" Type="Boolean" />
+    <Property Name="TaxName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TaxRate" Type="Decimal" Precision="5" Scale="4" />
+    <Property Name="Culture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SubsidySystem" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="SubsidyLabel" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ShowExtraFees" Type="Boolean" />
+    <Property Name="AllowTemplateSameInvPeriodPricing" Type="Boolean" />
+    <NavigationProperty Name="Org" Relationship="Self.FK_OrgCustomize_Org" FromRole="OrgCustomize" ToRole="Org" />
+  </EntityType>
+  <Association Name="FK_Org_Org">
+    <End Role="Org" Type="Self.Org" Multiplicity="0..1" />
+    <End Role="Org1" Type="Self.Org" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Org">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Org1">
+        <PropertyRef Name="ParentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrgCustomize_Org">
+    <End Role="Org" Type="Self.Org" Multiplicity="1" />
+    <End Role="OrgCustomize" Type="Self.OrgCustomize" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Org">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrgCustomize">
+        <PropertyRef Name="OrgId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Orgs" EntityType="Self.Org" />
+    <EntitySet Name="OrgCustomizes" EntityType="Self.OrgCustomize" />
+    <AssociationSet Name="FK_Org_Org" Association="Self.FK_Org_Org">
+      <End Role="Org" EntitySet="Orgs" />
+      <End Role="Org1" EntitySet="Orgs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrgCustomize_Org" Association="Self.FK_OrgCustomize_Org">
+      <End Role="Org" EntitySet="Orgs" />
+      <End Role="OrgCustomize" EntitySet="OrgCustomizes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
